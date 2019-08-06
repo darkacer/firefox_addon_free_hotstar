@@ -1,5 +1,6 @@
-
+console.log("scripy init");
 const hotStarRegx = new RegExp('^https\:\/\/www\.hotstar\.com.*');
+const sonyLivRegx = new RegExp('^https\:\/\/www\.sonyliv\.com.*');
 
 const CODE = `
     setInterval(function() {
@@ -21,8 +22,8 @@ function onFailure(error) {
 }
 
 function injectCode(tab) {
-    if (tab && hotStarRegx.test(tab.url)) {
-        console.log("Its a hotstar tab");
+    if (tab && (hotStarRegx.test(tab.url) || sonyLivRegx.test(tab.url))) {
+        console.log("Its a hotstar or sony tab");
         console.log(localStorage);
         var execute = browser.tabs.executeScript(tab.id, {code : CODE});
         execute.then(onExecuted, onFailure);
