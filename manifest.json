@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.sonyliv.com/*"],
-      "js": ["background_script.js"]
+      "js": []
     }
   ],
   "background" : {
