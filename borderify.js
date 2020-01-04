@@ -4,7 +4,8 @@ document.body.style.border = "5px solid green";
 
 
 // var cookies = document.cookie;
-// console.log(cookies)
+// console.log(cookies); 
+// Console statements
 
 var localStorage = window.localStorage;
 console.log(localStorage);
